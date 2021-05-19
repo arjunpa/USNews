@@ -33,10 +33,12 @@ struct Article: Decodable {
         case title
         case description
         case content
+        case urlToImage
     }
     
     let author: String
     let title: String
     let description: String
     let content: String
+    let urlToImage: String
 }
