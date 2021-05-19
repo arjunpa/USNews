@@ -16,7 +16,8 @@ class APIService: APIServiceInterface {
         self.session = sessionContext.session
     }
     
-    func request<T>(for request: Requestable, completion: @escaping (Result<APIHTTPDecodableResponse<T>, Error>) -> Void) where T : Decodable {
+    func request<T>(for request: Requestable,
+                    completion: @escaping (Result<APIHTTPDecodableResponse<T>, Error>) -> Void) where T : Decodable {
         do {
             let urlRequest = try request.asURLRequest()
             
@@ -44,7 +45,8 @@ class APIService: APIServiceInterface {
         }
     }
     
-    func request(for request: Requestable, completion: @escaping (Result<APIHTTPDataResponse, Error>) -> Void) {
+    func request(for request: Requestable,
+                 completion: @escaping (Result<APIHTTPDataResponse, Error>) -> Void) {
         self.dataRequest(for: request) { result in
             switch result {
             case .success(let response):

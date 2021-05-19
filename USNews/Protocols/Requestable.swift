@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  Requestable.swift
 //  USNews
 //
 //  Created by Arjun P A on 19/05/21.
