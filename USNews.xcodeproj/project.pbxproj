@@ -18,6 +18,8 @@
 		C2C00C6F26555EF600629018 /* APIServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C6E26555EF600629018 /* APIServiceInterface.swift */; };
 		C2C00C7226555F8900629018 /* APIHTTPDecodableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C7126555F8900629018 /* APIHTTPDecodableResponse.swift */; };
 		C2C00C742655600000629018 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C732655600000629018 /* APIServiceError.swift */; };
+		C2C00C7826556BF300629018 /* URLFormable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C7726556BF300629018 /* URLFormable.swift */; };
+		C2C00C7A26556C6800629018 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C7926556C6800629018 /* APIEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C2C00C6E26555EF600629018 /* APIServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceInterface.swift; sourceTree = "<group>"; };
 		C2C00C7126555F8900629018 /* APIHTTPDecodableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHTTPDecodableResponse.swift; sourceTree = "<group>"; };
 		C2C00C732655600000629018 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		C2C00C7726556BF300629018 /* URLFormable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFormable.swift; sourceTree = "<group>"; };
+		C2C00C7926556C6800629018 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,15 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				C2C00C5326555CAA00629018 /* AppDelegate.swift */,
-				C2C00C5726555CAA00629018 /* NewsListViewController.swift */,
-				C2C00C5926555CAA00629018 /* Main.storyboard */,
-				C2C00C6726555D9100629018 /* APIService.swift */,
-				C2C00C6926555DEF00629018 /* SessionContext.swift */,
-				C2C00C7026555F6A00629018 /* Foundation */,
-				C2C00C6B26555E5F00629018 /* Protocols */,
 				C2C00C5C26555CAB00629018 /* Assets.xcassets */,
-				C2C00C5E26555CAB00629018 /* LaunchScreen.storyboard */,
+				C2C00C7026555F6A00629018 /* Foundation */,
 				C2C00C6126555CAB00629018 /* Info.plist */,
+				C2C00C5E26555CAB00629018 /* LaunchScreen.storyboard */,
+				C2C00C6B26555E5F00629018 /* Protocols */,
+				C2C00C752655695A00629018 /* Storyboards */,
+				C2C00C762655696F00629018 /* ViewControllers */,
 			);
 			path = USNews;
 			sourceTree = "<group>";
@@ -85,6 +87,7 @@
 			children = (
 				C2C00C6C26555E8100629018 /* Request.swift */,
 				C2C00C6E26555EF600629018 /* APIServiceInterface.swift */,
+				C2C00C7726556BF300629018 /* URLFormable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -94,8 +97,27 @@
 			children = (
 				C2C00C7126555F8900629018 /* APIHTTPDecodableResponse.swift */,
 				C2C00C732655600000629018 /* APIServiceError.swift */,
+				C2C00C6726555D9100629018 /* APIService.swift */,
+				C2C00C6926555DEF00629018 /* SessionContext.swift */,
+				C2C00C7926556C6800629018 /* APIEndPoint.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		C2C00C752655695A00629018 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C2C00C5926555CAA00629018 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C2C00C762655696F00629018 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C00C5726555CAA00629018 /* NewsListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C00C6A26555DEF00629018 /* SessionContext.swift in Sources */,
+				C2C00C7A26556C6800629018 /* APIEndPoint.swift in Sources */,
 				C2C00C5826555CAA00629018 /* NewsListViewController.swift in Sources */,
+				C2C00C7826556BF300629018 /* URLFormable.swift in Sources */,
 				C2C00C6D26555E8100629018 /* Request.swift in Sources */,
 				C2C00C6826555D9100629018 /* APIService.swift in Sources */,
 				C2C00C6F26555EF600629018 /* APIServiceInterface.swift in Sources */,
