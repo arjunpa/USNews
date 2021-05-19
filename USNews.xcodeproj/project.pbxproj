@@ -25,6 +25,7 @@
 		C2C00C8126557B7F00629018 /* RequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8026557B7F00629018 /* RequestEncoding.swift */; };
 		C2C00C8326557C3A00629018 /* RequestURLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8226557C3A00629018 /* RequestURLEncoding.swift */; };
 		C2C00C8526557C9A00629018 /* RequestJSONEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8426557C9A00629018 /* RequestJSONEncoding.swift */; };
+		C2C00C882655813500629018 /* NewsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C872655813500629018 /* NewsListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C2C00C8026557B7F00629018 /* RequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncoding.swift; sourceTree = "<group>"; };
 		C2C00C8226557C3A00629018 /* RequestURLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestURLEncoding.swift; sourceTree = "<group>"; };
 		C2C00C8426557C9A00629018 /* RequestJSONEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestJSONEncoding.swift; sourceTree = "<group>"; };
+		C2C00C872655813500629018 /* NewsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,9 @@
 				C2C00C7026555F6A00629018 /* Foundation */,
 				C2C00C6126555CAB00629018 /* Info.plist */,
 				C2C00C5E26555CAB00629018 /* LaunchScreen.storyboard */,
+				C2C00C86265580B000629018 /* Models */,
 				C2C00C6B26555E5F00629018 /* Protocols */,
+				C2C00C89265583CF00629018 /* Repositories */,
 				C2C00C752655695A00629018 /* Storyboards */,
 				C2C00C762655696F00629018 /* ViewControllers */,
 			);
@@ -141,6 +145,21 @@
 				C2C00C7E265571A100629018 /* URLRequest+RequestMethod.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2C00C86265580B000629018 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2C00C872655813500629018 /* NewsListResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C2C00C89265583CF00629018 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +242,7 @@
 				C2C00C7C2655713300629018 /* Request.swift in Sources */,
 				C2C00C8326557C3A00629018 /* RequestURLEncoding.swift in Sources */,
 				C2C00C6D26555E8100629018 /* Requestable.swift in Sources */,
+				C2C00C882655813500629018 /* NewsListResponse.swift in Sources */,
 				C2C00C6826555D9100629018 /* APIService.swift in Sources */,
 				C2C00C6F26555EF600629018 /* APIServiceInterface.swift in Sources */,
 				C2C00C742655600000629018 /* APIServiceError.swift in Sources */,
