@@ -31,6 +31,10 @@ protocol ArticleViewModelInterface {
         get
     }
     
+    var articleURL: URL? {
+        get
+    }
+    
     func downloadImage(completion: @escaping (ImageDownloadState) -> Void)
     func cancelImageDownload()
 }
@@ -47,6 +51,8 @@ final class ArticleViewModel: ArticleViewModelInterface {
     
     let content: String?
     
+    let articleURL: URL?
+    
     private var imageDownloadTask: DownloadTask?
     
     init(article: Article) {
@@ -57,6 +63,12 @@ final class ArticleViewModel: ArticleViewModelInterface {
             self.imageURL = URL(string: urlToImage)
         } else {
             self.imageURL = nil
+        }
+        
+        if let url = article.url {
+            self.articleURL = URL(string: url)
+        } else {
+            self.articleURL = nil
         }
         self.content = article.content
     }

@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Main Implementation
 
-class ArticleListViewController: UIViewController {
+final class ArticleListViewController: UIViewController {
 
     private enum Constants {
         static let estimatedRowHeight: CGFloat = 100.0

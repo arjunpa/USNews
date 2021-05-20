@@ -15,6 +15,10 @@ protocol ArticleListRepositoryInterface {
 
 final class ArticleListRepository {
     
+    enum RepositoryError: Error {
+        case statusNotOk
+    }
+    
     private let apiService: APIServiceInterface
     
     init(apiService: APIServiceInterface, queue: OperationQueue) {
@@ -34,8 +38,18 @@ final class ArticleListRepository {
         self.apiService.request(for: request) { (result: Result<APIHTTPDecodableResponse<ArticleListResponse>, Error>) in
             switch result {
             case .success(let response):
+                
+                let mappedResult: Result<ArticleListResponse, Error> = {
+                    switch response.decoded.status {
+                    case .ok:
+                        return .success(response.decoded)
+                    case .other:
+                        return .failure(RepositoryError.statusNotOk)
+                    }
+                }()
+                
                 queue.addOperation {
-                    completion(.success(response.decoded))
+                    completion(mappedResult)
                 }
             case .failure(let error):
                 queue.addOperation {

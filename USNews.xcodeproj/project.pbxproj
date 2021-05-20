@@ -40,6 +40,7 @@
 		C2C00C902655918500629018 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8F2655918500629018 /* ArticleViewModel.swift */; };
 		C2C00C922655962B00629018 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C912655962B00629018 /* Collection+SafeIndex.swift */; };
 		C2DBBC30265640BA00497F0E /* ImageDownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */; };
+		C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */; };
 		C82EBBEA9A47E2D64C528A2B /* Pods_USNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751EF11C7FB345BBDC7202C3 /* Pods_USNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		C2C00C8F2655918500629018 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		C2C00C912655962B00629018 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadState.swift; sourceTree = "<group>"; };
+		C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
 		E660A67E0C385C85BAC09F8E /* Pods-USNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USNewsTests.release.xcconfig"; path = "Target Support Files/Pods-USNewsTests/Pods-USNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9A21D56E52F0976F7F53E55 /* Pods-USNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-USNewsTests/Pods-USNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F38EA5FD20F22F1980685974 /* Pods_USNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				C293F80826562ED100956406 /* USNewsTests.swift */,
+				C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */,
 				C293F80A26562ED100956406 /* Info.plist */,
 			);
 			path = USNewsTests;
@@ -456,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C293F80926562ED100956406 /* USNewsTests.swift in Sources */,
+				C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

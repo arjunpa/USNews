@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import USNews
+
 class USNewsTests: XCTestCase {
 
     override func setUp() {
