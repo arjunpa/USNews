@@ -56,9 +56,23 @@ class ArticleDetailSectionLikesAndComments {
     private var likes: Int?
     private var comments: Int?
     
+    var likesDescription: String? {
+        didSet {
+            self.updateLikesDescription()
+        }
+    }
+    
+    var commentsDescription: String? {
+        didSet {
+            self.updateCommentsDescription()
+        }
+    }
+    
     init(likes: Int?, comments: Int?) {
         self.likes = likes
         self.comments = comments
+        self.updateLikesDescription()
+        self.updateCommentsDescription()
     }
     
     func updateLikes(likes: Int?) {
@@ -67,6 +81,18 @@ class ArticleDetailSectionLikesAndComments {
     
     func updateComments(comments: Int?) {
         self.comments = comments
+    }
+    
+    private func updateLikesDescription() {
+        guard let likes = self.likes else { return }
+        
+        self.likesDescription = "\(likes)"
+    }
+    
+    private func updateCommentsDescription() {
+        guard let comments = self.comments else { return }
+        
+        self.commentsDescription = "\(comments)"
     }
 }
 
