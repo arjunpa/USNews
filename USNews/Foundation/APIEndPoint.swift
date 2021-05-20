@@ -9,7 +9,9 @@
 import Foundation
 
 enum APIEndPoint: String, URLFormable {
-    case newsListAPI = "https://newsapi.org/v2/top-headlines"
+    case articleListAPI = "https://newsapi.org/v2/top-headlines"
+    case articleLikes = "https://cn-news-info-api.herokuapp.com/likes/"
+    case articleComments = "https://cn-news-info-api.herokuapp.com/comments/"
     
     func asURL() throws -> URL {
         try self.rawValue.asURL()

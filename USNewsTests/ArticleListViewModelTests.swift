@@ -118,7 +118,7 @@ final class ArticleListViewModelTests: XCTestCase {
         
         viewModel.viewDelegate = viewUpdateDelegate
         
-        mockAPIService.simulationMode = .data(TestResponse.validResponse, HTTPURLResponse(url: try! APIEndPoint.newsListAPI.asURL(),
+        mockAPIService.simulationMode = .data(TestResponse.validResponse, HTTPURLResponse(url: try! APIEndPoint.articleListAPI.asURL(),
                                                                                           statusCode: 200,
                                                                                           httpVersion: "1.0",
                                                                                           headerFields: nil)!)

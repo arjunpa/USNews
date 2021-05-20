@@ -42,7 +42,10 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
     }
     
     func fetchArticles() {
-        self.repository.fetchArticles(completion: { result in
+        self.repository.fetchArticles(completion: { [weak self] result in
+            
+            guard let `self` = self else { return }
+            
             switch result {
             case .success(let response):
                 self.articleViewModels = response.articles.map { ArticleViewModel(article: $0) }

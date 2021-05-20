@@ -28,12 +28,12 @@ final class ArticleListRepository {
     func fetchArticles(completion: @escaping (Result<ArticleListResponse, Error>) -> Void,
                        queue: OperationQueue) {
         
-        let request = Request(url: APIEndPoint.newsListAPI,
-                                   method: .get,
-                                   parameters: ["country": Environment.countryCode,
-                                                "apiKey": Environment.apiKey],
-                                   headers: nil,
-                                   encoding: RequestURLEncoding())
+        let request = Request(url: APIEndPoint.articleListAPI,
+                              method: .get,
+                              parameters: ["country": Environment.countryCode,
+                                           "apiKey": Environment.apiKey],
+                              headers: nil,
+                              encoding: RequestURLEncoding())
         
         self.apiService.request(for: request) { (result: Result<APIHTTPDecodableResponse<ArticleListResponse>, Error>) in
             switch result {
