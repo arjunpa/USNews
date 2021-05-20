@@ -75,6 +75,10 @@ extension ArticleListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.articleListViewModel?.cancelImageDownloadAtIndex(index: indexPath.row)
+    }
 }
 
 // MARK: ArticleListUpdateViewDelegate Implementation

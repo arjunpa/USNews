@@ -10,6 +10,10 @@ import UIKit
 
 class NewsListCell: UITableViewCell {
 
+    private enum Constants {
+        static let noImageName = "no-image-available"
+    }
+    
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var authorLabel: UILabel!
@@ -19,6 +23,16 @@ class NewsListCell: UITableViewCell {
         titleLabel.text = articleViewModel.title
         descriptionLabel.text = articleViewModel.description
         authorLabel.text = articleViewModel.author
+        
+        self.topImageView.image = nil
+        articleViewModel.downloadImage { [weak self] state in
+            switch state {
+            case .noImage, .error:
+                self?.topImageView.image = UIImage(named: Constants.noImageName)
+            case .image(let image):
+                self?.topImageView.image = image
+            }
+        }
     }
     
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 protocol ArticleViewModelInterface {
     
@@ -30,6 +31,8 @@ protocol ArticleViewModelInterface {
         get
     }
     
+    func downloadImage(completion: @escaping (ImageDownloadState) -> Void)
+    func cancelImageDownload()
 }
 
 final class ArticleViewModel: ArticleViewModelInterface {
@@ -44,6 +47,8 @@ final class ArticleViewModel: ArticleViewModelInterface {
     
     let content: String?
     
+    private var imageDownloadTask: DownloadTask?
+    
     init(article: Article) {
         self.title = article.title
         self.author = article.author
@@ -54,5 +59,25 @@ final class ArticleViewModel: ArticleViewModelInterface {
             self.imageURL = nil
         }
         self.content = article.content
+    }
+    
+    func downloadImage(completion: @escaping (ImageDownloadState) -> Void) {
+        if let imageURL = self.imageURL {
+            self.imageDownloadTask = KingfisherManager.shared.retrieveImage(with: imageURL)
+            { result in
+                switch result {
+                case .success(let result):
+                    completion(.image(result.image))
+                case .failure(let error):
+                    completion(.error(error))
+                }
+            }
+        } else {
+            completion(.noImage)
+        }
+    }
+    
+    func cancelImageDownload() {
+        self.imageDownloadTask?.cancel()
     }
 }
