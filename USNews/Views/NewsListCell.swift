@@ -14,13 +14,8 @@ class NewsListCell: UITableViewCell {
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var authorLabel: UILabel!
     @IBOutlet private var topImageView: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    private func configure(with articleViewModel: ArticleViewModelInterface) {
+    func configure(with articleViewModel: ArticleViewModelInterface) {
         titleLabel.text = articleViewModel.title
         descriptionLabel.text = articleViewModel.description
         authorLabel.text = articleViewModel.author

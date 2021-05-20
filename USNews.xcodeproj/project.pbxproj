@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		C293F7F526560D4800956406 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7F326560D4800956406 /* NewsListCell.swift */; };
 		C293F7F626560D4800956406 /* NewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C293F7F426560D4800956406 /* NewsListCell.xib */; };
+		C293F7F82656192300956406 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7F72656192300956406 /* UITableViewCell+ReuseIdentifier.swift */; };
+		C293F7FB26561E6800956406 /* ArticleListDependencyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7FA26561E6800956406 /* ArticleListDependencyBuilder.swift */; };
 		C2C00C5426555CAA00629018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C5326555CAA00629018 /* AppDelegate.swift */; };
-		C2C00C5826555CAA00629018 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C5726555CAA00629018 /* NewsListViewController.swift */; };
+		C2C00C5826555CAA00629018 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C5726555CAA00629018 /* ArticleListViewController.swift */; };
 		C2C00C5B26555CAA00629018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C00C5926555CAA00629018 /* Main.storyboard */; };
 		C2C00C5D26555CAB00629018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C00C5C26555CAB00629018 /* Assets.xcassets */; };
 		C2C00C6026555CAB00629018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C00C5E26555CAB00629018 /* LaunchScreen.storyboard */; };
@@ -37,9 +39,11 @@
 /* Begin PBXFileReference section */
 		C293F7F326560D4800956406 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		C293F7F426560D4800956406 /* NewsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCell.xib; sourceTree = "<group>"; };
+		C293F7F72656192300956406 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		C293F7FA26561E6800956406 /* ArticleListDependencyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListDependencyBuilder.swift; sourceTree = "<group>"; };
 		C2C00C5026555CAA00629018 /* USNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C00C5326555CAA00629018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2C00C5726555CAA00629018 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		C2C00C5726555CAA00629018 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		C2C00C5A26555CAA00629018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2C00C5C26555CAB00629018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C00C5F26555CAB00629018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +88,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C293F7F926561E5200956406 /* Dependency builders */ = {
+			isa = PBXGroup;
+			children = (
+				C293F7FA26561E6800956406 /* ArticleListDependencyBuilder.swift */,
+			);
+			path = "Dependency builders";
+			sourceTree = "<group>";
+		};
 		C2C00C4726555CAA00629018 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +115,8 @@
 		C2C00C5226555CAA00629018 /* USNews */ = {
 			isa = PBXGroup;
 			children = (
-				C293F7F226560D2200956406 /* Views */,
 				C2C00C5326555CAA00629018 /* AppDelegate.swift */,
-				C2C00C8C26558EF100629018 /* ViewModels */,
+				C293F7F926561E5200956406 /* Dependency builders */,
 				C2C00C5C26555CAB00629018 /* Assets.xcassets */,
 				C2C00C7D2655717E00629018 /* Extensions */,
 				C2C00C7026555F6A00629018 /* Foundation */,
@@ -116,6 +127,8 @@
 				C2C00C89265583CF00629018 /* Repositories */,
 				C2C00C752655695A00629018 /* Storyboards */,
 				C2C00C762655696F00629018 /* ViewControllers */,
+				C2C00C8C26558EF100629018 /* ViewModels */,
+				C293F7F226560D2200956406 /* Views */,
 			);
 			path = USNews;
 			sourceTree = "<group>";
@@ -157,7 +170,7 @@
 		C2C00C762655696F00629018 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2C00C5726555CAA00629018 /* NewsListViewController.swift */,
+				C2C00C5726555CAA00629018 /* ArticleListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 			children = (
 				C2C00C7E265571A100629018 /* URLRequest+RequestMethod.swift */,
 				C2C00C912655962B00629018 /* Collection+SafeIndex.swift */,
+				C293F7F72656192300956406 /* UITableViewCell+ReuseIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,9 +284,10 @@
 			files = (
 				C2C00C6A26555DEF00629018 /* SessionContext.swift in Sources */,
 				C2C00C7A26556C6800629018 /* APIEndPoint.swift in Sources */,
+				C293F7FB26561E6800956406 /* ArticleListDependencyBuilder.swift in Sources */,
 				C2C00C7F265571A100629018 /* URLRequest+RequestMethod.swift in Sources */,
 				C293F7F526560D4800956406 /* NewsListCell.swift in Sources */,
-				C2C00C5826555CAA00629018 /* NewsListViewController.swift in Sources */,
+				C2C00C5826555CAA00629018 /* ArticleListViewController.swift in Sources */,
 				C2C00C7826556BF300629018 /* URLFormable.swift in Sources */,
 				C2C00C8526557C9A00629018 /* RequestJSONEncoding.swift in Sources */,
 				C2C00C7C2655713300629018 /* Request.swift in Sources */,
@@ -285,6 +300,7 @@
 				C2C00C8E26558F0500629018 /* ArticleListViewModel.swift in Sources */,
 				C2C00C742655600000629018 /* APIServiceError.swift in Sources */,
 				C2C00C8126557B7F00629018 /* RequestEncoding.swift in Sources */,
+				C293F7F82656192300956406 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				C2C00C7226555F8900629018 /* APIHTTPDecodableResponse.swift in Sources */,
 				C2C00C902655918500629018 /* ArticleViewModel.swift in Sources */,
 				C2C00C922655962B00629018 /* Collection+SafeIndex.swift in Sources */,
