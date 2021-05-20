@@ -41,6 +41,8 @@
 		C2C00C922655962B00629018 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C912655962B00629018 /* Collection+SafeIndex.swift */; };
 		C2DBBC30265640BA00497F0E /* ImageDownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */; };
 		C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */; };
+		C2DBBC36265679B100497F0E /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC35265679B100497F0E /* ResponseValidator.swift */; };
+		C2DBBC3826567B9400497F0E /* ResponseValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC3726567B9400497F0E /* ResponseValidatorTests.swift */; };
 		C82EBBEA9A47E2D64C528A2B /* Pods_USNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751EF11C7FB345BBDC7202C3 /* Pods_USNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		C2C00C912655962B00629018 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadState.swift; sourceTree = "<group>"; };
 		C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
+		C2DBBC35265679B100497F0E /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
+		C2DBBC3726567B9400497F0E /* ResponseValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidatorTests.swift; sourceTree = "<group>"; };
 		E660A67E0C385C85BAC09F8E /* Pods-USNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USNewsTests.release.xcconfig"; path = "Target Support Files/Pods-USNewsTests/Pods-USNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9A21D56E52F0976F7F53E55 /* Pods-USNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-USNewsTests/Pods-USNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F38EA5FD20F22F1980685974 /* Pods_USNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,7 @@
 			children = (
 				C293F80826562ED100956406 /* USNewsTests.swift */,
 				C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */,
+				C2DBBC3726567B9400497F0E /* ResponseValidatorTests.swift */,
 				C293F80A26562ED100956406 /* Info.plist */,
 			);
 			path = USNewsTests;
@@ -233,6 +238,7 @@
 				C2C00C8426557C9A00629018 /* RequestJSONEncoding.swift */,
 				C293F8002656245100956406 /* Environment.swift */,
 				C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */,
+				C2DBBC35265679B100497F0E /* ResponseValidator.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2DBBC3826567B9400497F0E /* ResponseValidatorTests.swift in Sources */,
 				C293F80926562ED100956406 /* USNewsTests.swift in Sources */,
 				C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */,
 			);
@@ -470,6 +477,7 @@
 				C2C00C6A26555DEF00629018 /* SessionContext.swift in Sources */,
 				C2C00C7A26556C6800629018 /* APIEndPoint.swift in Sources */,
 				C293F7FB26561E6800956406 /* ArticleListDependencyBuilder.swift in Sources */,
+				C2DBBC36265679B100497F0E /* ResponseValidator.swift in Sources */,
 				C2C00C7F265571A100629018 /* URLRequest+RequestMethod.swift in Sources */,
 				C293F7F526560D4800956406 /* NewsListCell.swift in Sources */,
 				C2C00C5826555CAA00629018 /* ArticleListViewController.swift in Sources */,

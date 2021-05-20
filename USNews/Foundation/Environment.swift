@@ -9,6 +9,6 @@
 import Foundation
 
 enum Environment {
-    static let apiKey = ""
+    static let apiKey = "02cf4b5da0874649bb21071f6352543e"
     static let countryCode = "us"
 }

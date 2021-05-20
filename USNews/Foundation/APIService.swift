@@ -12,8 +12,12 @@ class APIService: APIServiceInterface {
     
     private let session: URLSession
     
-    init(sessionContext: SessionContext = DataSessionContext.commonContext) {
+    private let responseValidator: ResponseValidating
+    
+    init(sessionContext: SessionContext = DataSessionContext.commonContext,
+         responseValidator: ResponseValidating = ResponseValidator.default) {
         self.session = sessionContext.session
+        self.responseValidator = responseValidator
     }
     
     func request<T>(for request: Requestable,
@@ -82,5 +86,9 @@ class APIService: APIServiceInterface {
         } catch {
             completion(.failure(error))
         }
+    }
+    
+    private func validateResponse(data: Data?, response: URLResponse, error: Error?) -> Result<(response: HTTPURLResponse?, data: Data), Error> {
+        return responseValidator.validateResponse(data: data, response: response, error: error)
     }
 }
