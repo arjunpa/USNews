@@ -18,7 +18,7 @@ protocol ArticleViewModelInterface {
         get
     }
     
-    var description: String {
+    var description: String? {
         get
     }
     
@@ -26,7 +26,7 @@ protocol ArticleViewModelInterface {
         get
     }
     
-    var content: String {
+    var content: String? {
         get
     }
     
@@ -38,17 +38,21 @@ final class ArticleViewModel: ArticleViewModelInterface {
     
     let author: String?
     
-    let description: String
+    let description: String?
     
     let imageURL: URL?
     
-    let content: String
+    let content: String?
     
     init(article: Article) {
         self.title = article.title
         self.author = article.author
         self.description = article.description
-        self.imageURL = URL(string: article.urlToImage)
+        if let urlToImage = article.urlToImage {
+            self.imageURL = URL(string: urlToImage)
+        } else {
+            self.imageURL = nil
+        }
         self.content = article.content
     }
 }
