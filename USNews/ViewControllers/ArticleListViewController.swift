@@ -89,3 +89,5 @@ extension ArticleListViewController: ArticleListUpdateViewDelegate {
         
     }
 }
+
+extension ArticleListViewController: StoryboardInstantiable {}

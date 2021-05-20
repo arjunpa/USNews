@@ -11,6 +11,9 @@
 		C293F7F626560D4800956406 /* NewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C293F7F426560D4800956406 /* NewsListCell.xib */; };
 		C293F7F82656192300956406 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7F72656192300956406 /* UITableViewCell+ReuseIdentifier.swift */; };
 		C293F7FB26561E6800956406 /* ArticleListDependencyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7FA26561E6800956406 /* ArticleListDependencyBuilder.swift */; };
+		C293F7FD2656218900956406 /* UIStoryboard+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7FC2656218900956406 /* UIStoryboard+Additions.swift */; };
+		C293F7FF265621C600956406 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F7FE265621C600956406 /* StoryboardInstantiable.swift */; };
+		C293F8012656245100956406 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293F8002656245100956406 /* Environment.swift */; };
 		C2C00C5426555CAA00629018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C5326555CAA00629018 /* AppDelegate.swift */; };
 		C2C00C5826555CAA00629018 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C5726555CAA00629018 /* ArticleListViewController.swift */; };
 		C2C00C5B26555CAA00629018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C00C5926555CAA00629018 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		C293F7F426560D4800956406 /* NewsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCell.xib; sourceTree = "<group>"; };
 		C293F7F72656192300956406 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		C293F7FA26561E6800956406 /* ArticleListDependencyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListDependencyBuilder.swift; sourceTree = "<group>"; };
+		C293F7FC2656218900956406 /* UIStoryboard+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Additions.swift"; sourceTree = "<group>"; };
+		C293F7FE265621C600956406 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		C293F8002656245100956406 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		C2C00C5026555CAA00629018 /* USNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C00C5326555CAA00629018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C00C5726555CAA00629018 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				C2C00C6E26555EF600629018 /* APIServiceInterface.swift */,
 				C2C00C7726556BF300629018 /* URLFormable.swift */,
 				C2C00C8026557B7F00629018 /* RequestEncoding.swift */,
+				C293F7FE265621C600956406 /* StoryboardInstantiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 				C2C00C7B2655713300629018 /* Request.swift */,
 				C2C00C8226557C3A00629018 /* RequestURLEncoding.swift */,
 				C2C00C8426557C9A00629018 /* RequestJSONEncoding.swift */,
+				C293F8002656245100956406 /* Environment.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 				C2C00C7E265571A100629018 /* URLRequest+RequestMethod.swift */,
 				C2C00C912655962B00629018 /* Collection+SafeIndex.swift */,
 				C293F7F72656192300956406 /* UITableViewCell+ReuseIdentifier.swift */,
+				C293F7FC2656218900956406 /* UIStoryboard+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 				C2C00C5826555CAA00629018 /* ArticleListViewController.swift in Sources */,
 				C2C00C7826556BF300629018 /* URLFormable.swift in Sources */,
 				C2C00C8526557C9A00629018 /* RequestJSONEncoding.swift in Sources */,
+				C293F7FD2656218900956406 /* UIStoryboard+Additions.swift in Sources */,
 				C2C00C7C2655713300629018 /* Request.swift in Sources */,
 				C2C00C8326557C3A00629018 /* RequestURLEncoding.swift in Sources */,
 				C2C00C6D26555E8100629018 /* Requestable.swift in Sources */,
@@ -302,7 +312,9 @@
 				C2C00C8126557B7F00629018 /* RequestEncoding.swift in Sources */,
 				C293F7F82656192300956406 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				C2C00C7226555F8900629018 /* APIHTTPDecodableResponse.swift in Sources */,
+				C293F8012656245100956406 /* Environment.swift in Sources */,
 				C2C00C902655918500629018 /* ArticleViewModel.swift in Sources */,
+				C293F7FF265621C600956406 /* StoryboardInstantiable.swift in Sources */,
 				C2C00C922655962B00629018 /* Collection+SafeIndex.swift in Sources */,
 				C2C00C5426555CAA00629018 /* AppDelegate.swift in Sources */,
 			);

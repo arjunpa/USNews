@@ -26,7 +26,8 @@ final class ArticleListRepository {
         
         let request = Request(url: APIEndPoint.newsListAPI,
                                    method: .get,
-                                   parameters: nil,
+                                   parameters: ["country": Environment.countryCode,
+                                                "apiKey": Environment.apiKey],
                                    headers: nil,
                                    encoding: RequestURLEncoding())
         
