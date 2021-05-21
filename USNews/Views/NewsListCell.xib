@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="322" height="329"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Did-vy-mLz">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Did-vy-mLz" customClass="ContainerView" customModule="USNews" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="306" height="313"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jPa-dX-Krs">

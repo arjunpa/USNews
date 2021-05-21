@@ -44,6 +44,7 @@
 		C2DB2EAA2657737A005184FC /* SafeDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EA92657737A005184FC /* SafeDecodable.swift */; };
 		C2DB2EAC26577555005184FC /* Article+AdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EAB26577555005184FC /* Article+AdditionsTests.swift */; };
 		C2DB2EAE26577777005184FC /* JSONDecoder+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EAD26577777005184FC /* JSONDecoder+JSON.swift */; };
+		C2DB2EB026579CAA005184FC /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EAF26579CAA005184FC /* ContainerView.swift */; };
 		C2DBBC30265640BA00497F0E /* ImageDownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */; };
 		C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */; };
 		C2DBBC36265679B100497F0E /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC35265679B100497F0E /* ResponseValidator.swift */; };
@@ -120,6 +121,7 @@
 		C2DB2EA92657737A005184FC /* SafeDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDecodable.swift; sourceTree = "<group>"; };
 		C2DB2EAB26577555005184FC /* Article+AdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+AdditionsTests.swift"; sourceTree = "<group>"; };
 		C2DB2EAD26577777005184FC /* JSONDecoder+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+JSON.swift"; sourceTree = "<group>"; };
+		C2DB2EAF26579CAA005184FC /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadState.swift; sourceTree = "<group>"; };
 		C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
 		C2DBBC35265679B100497F0E /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				C2DBBC502656EC2400497F0E /* ArticleLikesAndCommentsCell.xib */,
 				C293F7F326560D4800956406 /* NewsListCell.swift */,
 				C293F7F426560D4800956406 /* NewsListCell.xib */,
+				C2DB2EAF26579CAA005184FC /* ContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				C2DBBC402656BF0F00497F0E /* URLFormable+PathAdditions.swift in Sources */,
 				C2DB2EAE26577777005184FC /* JSONDecoder+JSON.swift in Sources */,
 				C2C00C7C2655713300629018 /* Request.swift in Sources */,
+				C2DB2EB026579CAA005184FC /* ContainerView.swift in Sources */,
 				C2DBBC462656E8C600497F0E /* ArticleDetailSection.swift in Sources */,
 				C2DBBC3C2656B6AD00497F0E /* ArticleLikes.swift in Sources */,
 				C2DBBC492656EBC600497F0E /* ArticleDetailImageCell.swift in Sources */,
