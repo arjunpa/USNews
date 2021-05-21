@@ -66,7 +66,7 @@ final class ArticleListViewModelTests: XCTestCase {
         }
     }
     
-    final class MockAPIService: APIServiceInterface {
+    private final class MockAPIService: APIServiceInterface {
         
         enum ResultSimulation {
             case data(String, HTTPURLResponse)
@@ -123,7 +123,7 @@ final class ArticleListViewModelTests: XCTestCase {
                                                                                           httpVersion: "1.0",
                                                                                           headerFields: nil)!)
         
-        let expectation = self.expectation(description: "testing.valid.response")
+        let expectation = self.expectation(description: "testing.articlelist.valid.response")
 
         self.viewUpdateDelegate?.onUpdateView = {
             expectation.fulfill()

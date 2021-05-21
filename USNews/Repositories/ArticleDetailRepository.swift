@@ -107,24 +107,7 @@ final class ArticleDetailRepository: ArticleDetailRepositoryInterface {
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
-        
-        self.retrieveComments(articleID: articleID,
-                                               queue: .main)
-        { result in
-            commentsResult = result
-            
-            dispatchGroup.leave()
-        }
-        
         dispatchGroup.enter()
-        
-        self.retrieveLikes(articleID: articleID,
-                                            queue: .main)
-        { result in
-            likesResult = result
-            
-            dispatchGroup.leave()
-        }
         
         dispatchGroup.notify(queue: groupQueue) {
             
@@ -134,6 +117,22 @@ final class ArticleDetailRepository: ArticleDetailRepositoryInterface {
                 }
                 completion(likesResult, commentsResult)
             }
+        }
+        
+        self.retrieveComments(articleID: articleID,
+                                               queue: .main)
+        { result in
+            commentsResult = result
+            
+            dispatchGroup.leave()
+        }
+        
+        self.retrieveLikes(articleID: articleID,
+                                            queue: .main)
+        { result in
+            likesResult = result
+            
+            dispatchGroup.leave()
         }
     }
 }
