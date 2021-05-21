@@ -10,7 +10,7 @@ import Foundation
 
 import Foundation
 
-/// Wrapes around the decodable types so that when used with collections, an error decoding one element won't result in failure of decoding the entire collection.
+/// Wrapes around the decodable types so that when used with collections, an error decoding one element will not result in failure of decoding the entire collection.
 struct SafeDecodable<Base: Decodable>: Decodable {
     let underlyingBase: Base?
     

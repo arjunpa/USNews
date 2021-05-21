@@ -10,12 +10,17 @@ import Foundation
 
 struct RequestURLEncoding: RequestEncoding {
     
-    func encode(_ request: Requestable, with parameters: RequestParameters?) throws -> URLRequest {
+    func encode(_ request: Requestable,
+                with parameters: RequestParameters?) throws -> URLRequest {
         var urlRequest = try request.asURLRequest()
         guard
             let requestMethod = urlRequest.requestMethod,
             let parameters = parameters
             else { return urlRequest }
+        
+        /*
+            If its a get request, we encode the paramaters as query parameters. If it isn't, it assumes to be a post request and adds the parameters in the http body as url form encoded.
+         */
         
         if self.shouldEncodeParametersInURL(forRequestMethod: requestMethod) {
             guard let url = urlRequest.url else {
@@ -25,12 +30,14 @@ struct RequestURLEncoding: RequestEncoding {
             if
                 !parameters.isEmpty,
                 var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+                //
                 let queryEncodedURL = (urlComponents.percentEncodedQuery.map({ $0 + "&" }) ?? "") + self.queryEncodedString(from: parameters)
                 urlComponents.percentEncodedQuery = queryEncodedURL
                 urlRequest.url = urlComponents.url ?? urlRequest.url
-            } else {
-                urlRequest.httpBody = self.queryEncodedString(from: parameters).data(using: .utf8)
             }
+        } else {
+            // Form encoded as key1=value1&key2=value2.
+                urlRequest.httpBody = self.queryEncodedString(from: parameters).data(using: .utf8)
         }
         
         return urlRequest
