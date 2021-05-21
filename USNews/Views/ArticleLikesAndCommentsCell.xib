@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elR-va-fhb">
-                        <rect key="frame" x="56" y="12" width="37" height="17"/>
+                        <rect key="frame" x="56" y="8" width="37" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                     <constraint firstItem="NFG-W3-Dfw" firstAttribute="firstBaseline" secondItem="6ZT-AD-3KO" secondAttribute="firstBaseline" id="BWN-fa-pQV"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="elR-va-fhb" secondAttribute="trailing" constant="16" id="DBZ-X8-hNA"/>
                     <constraint firstAttribute="bottom" secondItem="6ZT-AD-3KO" secondAttribute="bottom" constant="8" id="KYD-XZ-cn8"/>
-                    <constraint firstItem="elR-va-fhb" firstAttribute="firstBaseline" secondItem="4kQ-l4-VAj" secondAttribute="firstBaseline" constant="4" id="QoM-YX-9kt"/>
+                    <constraint firstItem="elR-va-fhb" firstAttribute="firstBaseline" secondItem="4kQ-l4-VAj" secondAttribute="firstBaseline" id="QoM-YX-9kt"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NFG-W3-Dfw" secondAttribute="trailing" constant="8" id="RPr-qy-Zxt"/>
                     <constraint firstItem="4kQ-l4-VAj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aP5-5U-1pm"/>
                     <constraint firstItem="4kQ-l4-VAj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ejb-v6-2BA"/>

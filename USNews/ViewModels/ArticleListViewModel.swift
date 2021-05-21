@@ -12,6 +12,7 @@ protocol ArticleListViewModelInterface {
     var numberOfArticles: Int { get }
     func fetchArticles()
     func articleAtIndex(index: Int) -> ArticleViewModelInterface?
+    func detailViewModel(at index: Int, viewUpdateDelegate: ArticleDetailViewUpdateDelegate) -> ArticleDetailViewModelInterface?
     func cancelImageDownloadAtIndex(index: Int)
 }
 
@@ -59,5 +60,13 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
     
     func cancelImageDownloadAtIndex(index: Int) {
         self.articleViewModels[safe: index]?.cancelImageDownload()
+    }
+    
+    func detailViewModel(at index: Int, viewUpdateDelegate: ArticleDetailViewUpdateDelegate) -> ArticleDetailViewModelInterface? {
+        guard let articleViewModel = self.articleViewModels[safe: index] else { return nil }
+        let detailViewModel =  ArticleDetailViewModel(article: articleViewModel.article,
+                                                      detailRepository: ArticleDetailRepository(apiService: APIService()))
+        detailViewModel.viewDelegate = viewUpdateDelegate
+        return detailViewModel
     }
 }

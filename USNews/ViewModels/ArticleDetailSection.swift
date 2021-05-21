@@ -45,28 +45,31 @@ class ArticleDetailSectionImage {
 
 class ArticleDetailSectionTitle {
     let title: String
+    let author: String?
     
-    init(title: String) {
+    init(title: String, author: String?) {
         self.title = title
+        self.author = author
     }
 }
 
 class ArticleDetailSectionLikesAndComments {
     
-    private var likes: Int?
-    private var comments: Int?
-    
-    var likesDescription: String? {
+    private var likes: Int? {
         didSet {
             self.updateLikesDescription()
         }
     }
     
-    var commentsDescription: String? {
+    private var comments: Int? {
         didSet {
             self.updateCommentsDescription()
         }
     }
+    
+    var likesDescription: String?
+    
+    var commentsDescription: String?
     
     init(likes: Int?, comments: Int?) {
         self.likes = likes

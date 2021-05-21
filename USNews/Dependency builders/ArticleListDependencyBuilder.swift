@@ -19,4 +19,10 @@ final class ArticleListDependencyBuilder {
         viewModel.viewDelegate = rootViewController
         return rootViewController
     }
+    
+    static func buildArticleDetail() -> ArticleDetailViewController {
+        let rootViewController: ArticleDetailViewController = UIStoryboard(storyboardName: .main)
+                                                                .instantiateViewController()
+        return rootViewController
+    }
 }

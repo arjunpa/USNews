@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ArticleDetailViewModelInterface {
+protocol ArticleDetailViewModelInterface: AnyObject {
     
     var numberOfRows: Int {
         get
@@ -47,9 +47,12 @@ final class ArticleDetailViewModel: ArticleDetailViewModelInterface {
         
         if let urlToImage = article.urlToImage {
             sections.append(.image(ArticleDetailSectionImage(url: URL(string: urlToImage))))
+        } else {
+             sections.append(.image(ArticleDetailSectionImage(url: nil)))
         }
         
-        sections.append(.title(ArticleDetailSectionTitle(title: self.article.title)))
+        sections.append(.title(ArticleDetailSectionTitle(title: self.article.title,
+                                                         author: self.article.author)))
         
         sections.append(.likesAndComments(ArticleDetailSectionLikesAndComments(likes: nil, comments: nil)))
         

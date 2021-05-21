@@ -73,7 +73,13 @@ extension ArticleListViewController: UITableViewDataSource {
 extension ArticleListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = ArticleListDependencyBuilder.buildArticleDetail()
         
+        guard let detailViewModel = self.articleListViewModel?.detailViewModel(at: indexPath.row,
+                                                                               viewUpdateDelegate: detailViewController)
+              else { return }
+        detailViewController.detailViewModel = detailViewModel
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {

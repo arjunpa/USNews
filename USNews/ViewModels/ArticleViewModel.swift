@@ -53,9 +53,12 @@ final class ArticleViewModel: ArticleViewModelInterface {
     
     let articleURL: URL?
     
+    private(set) var article: Article
+    
     private var imageDownloadTask: DownloadTask?
     
     init(article: Article) {
+        self.article = article
         self.title = article.title
         self.author = article.author
         self.description = article.description

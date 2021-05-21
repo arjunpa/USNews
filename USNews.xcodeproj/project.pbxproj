@@ -39,6 +39,7 @@
 		C2C00C8E26558F0500629018 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8D26558F0500629018 /* ArticleListViewModel.swift */; };
 		C2C00C902655918500629018 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8F2655918500629018 /* ArticleViewModel.swift */; };
 		C2C00C922655962B00629018 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C912655962B00629018 /* Collection+SafeIndex.swift */; };
+		C2DB2EA62656F946005184FC /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EA52656F946005184FC /* ArticleDetailViewController.swift */; };
 		C2DBBC30265640BA00497F0E /* ImageDownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */; };
 		C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */; };
 		C2DBBC36265679B100497F0E /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC35265679B100497F0E /* ResponseValidator.swift */; };
@@ -110,6 +111,7 @@
 		C2C00C8D26558F0500629018 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		C2C00C8F2655918500629018 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		C2C00C912655962B00629018 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
+		C2DB2EA52656F946005184FC /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadState.swift; sourceTree = "<group>"; };
 		C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
 		C2DBBC35265679B100497F0E /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C00C5726555CAA00629018 /* ArticleListViewController.swift */,
+				C2DB2EA52656F946005184FC /* ArticleDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				C2C00C7826556BF300629018 /* URLFormable.swift in Sources */,
 				C2C00C8526557C9A00629018 /* RequestJSONEncoding.swift in Sources */,
 				C293F7FD2656218900956406 /* UIStoryboard+Additions.swift in Sources */,
+				C2DB2EA62656F946005184FC /* ArticleDetailViewController.swift in Sources */,
 				C2DBBC402656BF0F00497F0E /* URLFormable+PathAdditions.swift in Sources */,
 				C2C00C7C2655713300629018 /* Request.swift in Sources */,
 				C2DBBC462656E8C600497F0E /* ArticleDetailSection.swift in Sources */,

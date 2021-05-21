@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Article Detail View Controller-->
         <scene sceneID="qz7-Vz-IV7">
             <objects>
-                <viewController id="kY1-6M-Bz1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleDetailViewController" id="kY1-6M-Bz1" customClass="ArticleDetailViewController" customModule="USNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xu6-fR-VYS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nZt-u5-1XY"/>
                     </view>
+                    <connections>
+                        <outlet property="articleDetailTableView" destination="Gb5-t4-Zcx" id="MUq-Vd-LdX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEY-nn-3xl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
