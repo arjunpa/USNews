@@ -12,12 +12,18 @@ class NewsListCell: UITableViewCell {
 
     private enum Constants {
         static let noImageName = "no-image-available"
+        static let backgroundColor = UIColor(red: 211.0/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)
     }
     
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var authorLabel: UILabel!
     @IBOutlet private var topImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.contentView.backgroundColor = Constants.backgroundColor
+    }
 
     func configure(with articleViewModel: ArticleViewModelInterface) {
         titleLabel.text = articleViewModel.title

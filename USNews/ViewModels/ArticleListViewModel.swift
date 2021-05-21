@@ -19,6 +19,8 @@ protocol ArticleListViewModelInterface {
 protocol ArticleListUpdateViewDelegate: AnyObject {
     func updateView()
     func updateOnError(error: Error)
+    func didStartFetchingArticles()
+    func didFinishFetchingArticles()
 }
 
 final class ArticleListViewModel: ArticleListViewModelInterface {
@@ -43,6 +45,9 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
     }
     
     func fetchArticles() {
+        
+        self.viewDelegate?.didStartFetchingArticles()
+        
         self.repository.fetchArticles(completion: { [weak self] result in
             
             guard let `self` = self else { return }
@@ -55,6 +60,9 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
             case .failure(let error):
                 self.viewDelegate?.updateOnError(error: error)
             }
+            
+            self.viewDelegate?.didFinishFetchingArticles()
+            
         }, queue: .main)
     }
     

@@ -20,6 +20,12 @@ final class ArticleListViewController: UIViewController {
     
     var articleListViewModel: ArticleListViewModelInterface?
     
+    private let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
+    
     // MARK: Overrides
     
     override func viewDidLoad() {
@@ -37,6 +43,7 @@ extension ArticleListViewController {
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = Constants.estimatedRowHeight
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.activityIndicator)
         self.registerCells()
     }
     
@@ -96,7 +103,28 @@ extension ArticleListViewController: ArticleListUpdateViewDelegate {
     }
     
     func updateOnError(error: Error) {
+        let alertViewController = UIAlertController(title: "Something Went Wrong.",
+                                                    message: "Please try again later.",
+                                                    preferredStyle: .alert)
+        alertViewController.addAction(UIAlertAction(title: "Cancel",
+                                                    style: .default,
+                                                    handler: nil))
         
+        alertViewController.addAction(UIAlertAction(title: "Retry",
+                                                    style: .default,
+                                                    handler: { [weak self] _ in
+                                                        self?.articleListViewModel?.fetchArticles()
+        }))
+        
+        self.present(alertViewController, animated: true, completion: nil)
+    }
+    
+    func didStartFetchingArticles() {
+        self.activityIndicator.startAnimating()
+    }
+    
+    func didFinishFetchingArticles() {
+        self.activityIndicator.stopAnimating()
     }
 }
 

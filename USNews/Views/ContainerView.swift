@@ -36,7 +36,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 17.4 {
+    @IBInspectable var cornerRadius: CGFloat = 12.0 {
         didSet {
             self.updateMask()
         }
