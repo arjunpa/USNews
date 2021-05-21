@@ -8,11 +8,7 @@
 
 import UIKit
 
-final class ContainerView: UIView {
-    
-    private enum Constants {
-        static let defaultCornerRadius: CGFloat = 17.4
-    }
+@IBDesignable class ContainerView: UIView {
     
     enum Position: String {
         case all
@@ -28,7 +24,7 @@ final class ContainerView: UIView {
         }
     }
     
-    var positionOfView: String = Position.all.rawValue {
+    @IBInspectable var positionOfView: String = Position.all.rawValue {
         didSet {
             self.position = Position(rawValue: self.positionOfView) ?? .all
         }
@@ -40,20 +36,20 @@ final class ContainerView: UIView {
         }
     }
     
-    var cornerRadius: CGFloat = Constants.defaultCornerRadius {
+    @IBInspectable var cornerRadius: CGFloat = 17.4 {
         didSet {
             self.updateMask()
         }
     }
     
-    var borderColor: UIColor? {
+    @IBInspectable var borderColor: UIColor? {
         didSet {
             self.containingLayer.strokeColor = self.borderColor?.cgColor
             self.updateMask()
         }
     }
     
-    var borderWidth: CGFloat = .zero {
+    @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet {
             self.containingLayer.lineWidth = self.borderWidth
             self.updateMask()
@@ -88,6 +84,11 @@ final class ContainerView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.configure()
+        self.setup()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
         self.setup()
     }
     
