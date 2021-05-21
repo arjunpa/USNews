@@ -24,6 +24,19 @@ struct ArticleListResponse: Decodable {
     let status: Status
     let totalResults: Int
     let articles: [Article]
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.status = try container.decode(Status.self, forKey: .status)
+        self.totalResults = try container.decode(Int.self, forKey: .totalResults)
+        
+        /*
+         Wrapping articles with `SafeDecodable` to prevent the failure of the entire collection in case a single article element fails at it.
+         */
+        
+        self.articles = try container.decode([SafeDecodable<Article>].self,
+                                             forKey: .articles).compactMap({ $0.underlyingBase })
+    }
 }
 
 struct Article: Decodable {

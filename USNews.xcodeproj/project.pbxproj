@@ -40,6 +40,8 @@
 		C2C00C902655918500629018 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C8F2655918500629018 /* ArticleViewModel.swift */; };
 		C2C00C922655962B00629018 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C00C912655962B00629018 /* Collection+SafeIndex.swift */; };
 		C2DB2EA62656F946005184FC /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EA52656F946005184FC /* ArticleDetailViewController.swift */; };
+		C2DB2EA8265771A7005184FC /* ArticleDetailModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EA7265771A7005184FC /* ArticleDetailModelTests.swift */; };
+		C2DB2EAA2657737A005184FC /* SafeDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB2EA92657737A005184FC /* SafeDecodable.swift */; };
 		C2DBBC30265640BA00497F0E /* ImageDownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */; };
 		C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */; };
 		C2DBBC36265679B100497F0E /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBBC35265679B100497F0E /* ResponseValidator.swift */; };
@@ -112,6 +114,8 @@
 		C2C00C8F2655918500629018 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		C2C00C912655962B00629018 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		C2DB2EA52656F946005184FC /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		C2DB2EA7265771A7005184FC /* ArticleDetailModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModelTests.swift; sourceTree = "<group>"; };
+		C2DB2EA92657737A005184FC /* SafeDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDecodable.swift; sourceTree = "<group>"; };
 		C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadState.swift; sourceTree = "<group>"; };
 		C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
 		C2DBBC35265679B100497F0E /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 				C293F80826562ED100956406 /* USNewsTests.swift */,
 				C2DBBC3126564D4B00497F0E /* ArticleListViewModelTests.swift */,
 				C2DBBC3726567B9400497F0E /* ResponseValidatorTests.swift */,
+				C2DB2EA7265771A7005184FC /* ArticleDetailModelTests.swift */,
 				C293F80A26562ED100956406 /* Info.plist */,
 			);
 			path = USNewsTests;
@@ -279,6 +284,7 @@
 				C293F8002656245100956406 /* Environment.swift */,
 				C2DBBC2F265640BA00497F0E /* ImageDownloadState.swift */,
 				C2DBBC35265679B100497F0E /* ResponseValidator.swift */,
+				C2DB2EA92657737A005184FC /* SafeDecodable.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				C2DBBC3826567B9400497F0E /* ResponseValidatorTests.swift in Sources */,
 				C293F80926562ED100956406 /* USNewsTests.swift in Sources */,
 				C2DBBC3226564D4B00497F0E /* ArticleListViewModelTests.swift in Sources */,
+				C2DB2EA8265771A7005184FC /* ArticleDetailModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +567,7 @@
 				C2C00C8126557B7F00629018 /* RequestEncoding.swift in Sources */,
 				C293F7F82656192300956406 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				C2C00C7226555F8900629018 /* APIHTTPDecodableResponse.swift in Sources */,
+				C2DB2EAA2657737A005184FC /* SafeDecodable.swift in Sources */,
 				C293F8012656245100956406 /* Environment.swift in Sources */,
 				C2C00C902655918500629018 /* ArticleViewModel.swift in Sources */,
 				C293F7FF265621C600956406 /* StoryboardInstantiable.swift in Sources */,
