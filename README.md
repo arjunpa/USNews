@@ -5,4 +5,6 @@ Instructions to run:
   1. git clone the master branch.
   2. Navigate to the root directory of the project.
   3. Run `pod install`.
+  4. The app needs a valid `news.org` token. Please got to `Environment.swift` and update the `apiKey`.
+  5. Run the app.
   
